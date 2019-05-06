@@ -21,7 +21,7 @@
        var demoVar = document.getElementById("demo");
       //document.getElementById("demo").innerHTML = this.responseText;
 
-      txt += "<table class='table is-striped is-fullwidth'>"
+      txt += "<table class='table is-striped is-fullwidth is-narrow'>"
       txt += "<tr><th>committer</th><th>repo</th><th>commit messege</th></tr>"
     for (x in gCommits) {
       txt += "<tr><td>" + gCommits[x].committer.login +  "</td><td>"  + gRepoN + "</td><td>"  + gCommits[x].commit.message + "</td></tr>";
