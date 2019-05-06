@@ -1,0 +1,35 @@
+//creating the table
+      var table = document.createElement("table");
+      var table2 = document.createElement("tbody");
+
+        for (i = 0; i < gCommitsSize.length; i++){
+            var t_row = document.createElement("tr");
+            
+                var t_column1 = document.createElement("th");
+                var t_node1 = document.createTextNode(gRepoN);
+                console.log(gRepoN);
+                t_column1.appendChild(t_node1);
+                var t_column2 = document.createElement("th");
+                var t_node2 = document.createTextNode(gCommits[i].committer.login);
+                console.log(gCommits[i].committer.login);
+                t_column2.appendChild(t_node1);
+                var t_column3 = document.createElement("th");
+                var t_node3 = document.createTextNode(gCommits[i].commit.message);
+                console.debug(gCommits[i].commit.message);
+                t_column3.appendChild(t_node1);
+                var t_column4 = document.createElement("th");
+                var t_node4 = document.createTextNode(gCommits[i].commit.author.date);
+                console.debug(gCommits[i].commit.author.date);
+                t_column4.appendChild(t_node1);
+                
+                t_row.appendChild(t_column1);
+                t_row.appendChild(t_column2);
+                t_row.appendChild(t_column3);
+                t_row.appendChild(t_rcolumn4);
+            
+           table2.appendChild(t_row);
+        }
+
+      
+      table.appendChild(table2);
+      // end grave
