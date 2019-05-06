@@ -21,7 +21,7 @@
        var demoVar = document.getElementById("demo");
       //document.getElementById("demo").innerHTML = this.responseText;
 
-      txt += "<table class='table is-striped'>"
+      txt += "<table class='table is-striped is-fullwidth'>"
       txt += "<tr><th>committer</th><th>repo</th><th>commit messege</th></tr>"
     for (x in gCommits) {
       txt += "<tr><td>" + gCommits[x].committer.login +  "</td><td>"  + gRepoN + "</td><td>"  + gCommits[x].commit.message + "</td></tr>";
@@ -46,8 +46,58 @@
 }
         </script>
 
+<nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+          <h3 class="subtitle is-3">backend_api</h3>
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="columns">
+    <div class="column is-one-fifths">
+        
+        
+      <aside class="menu">
+        <ul class="menu-list">
+          <li><a>feed</a></li>
+          
+        </ul>
+        <p class="menu-label">
+          projects
+        </p>
+        <ul class="menu-list">
+          <li><a>alpha</a></li>
+          <li>
+            <a class="is-active">SpergProject</a>
+          </li>
+          
+        </ul>
+        <p class="menu-label">
+          misc.
+        </p>
+        <ul class="menu-list">
+          <li><a>add a project</a></li>
+          <li><a>project list</a></li>
+          <li><a>~DEMO~ NOT FUNCTIONAL</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="column is-four-fifths">
+        <h1 class="title is-1">SpergProject feed</h1>
         <button onclick="loadCommits()">Load Commits</button>
-        <br>
         <span id="demo"></span>
+
+    </div>
+    
+        
+  </div>
+        
     </body>
 </html>
